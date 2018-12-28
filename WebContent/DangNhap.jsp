@@ -1,36 +1,35 @@
- <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="zxx">
-   <head>
-      <title>Đăng nhập</title>
-      <!--meta tags -->
-     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="keywords" content="" />
-      <!--//meta tags ends here-->
-      <!--booststrap-->
-      <link href="guest_user/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
-      <!--//booststrap end-->
-      <!-- font-awesome icons -->
-      <link href="guest_user/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">
-      <!-- //font-awesome icons -->
-      <!-- For Clients slider -->
-      <link rel="stylesheet" href="guest_user/css/flexslider.css" type="text/css" media="all" />
-      <!--flexs slider-->
-      <link href="guest_user/css/JiSlider.css" rel="stylesheet">
-      <!--Shoping cart-->
-      <!-- <link rel="stylesheet" href="guest_user/css/shop.css" type="text/css" />
- -->      <!--//Shoping cart-->
-      <!--stylesheets-->
-      <link href="guest_user/css/style.css" rel='stylesheet' type='text/css' media="all">
-      <link href="guest_user/css/login.css" rel='stylesheet' type='text/css' media="all">
-       <link href="guest_user/css/background_dong.css" rel='stylesheet' type='text/css' media="all">
-      <!--//stylesheets-->
-      <link href="//fonts.googleapis.com/css?family=Sunflower:500,700" rel="stylesheet">
-      <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-      <script type="text/javascript" src="guest_user/assests/js/jquery-3.3.1.min.js"></script>
-	 <script type="text/javascript" src="guest_user/js/kiemtradangnhap.js"></script> 
-    <script type="text/javascript"> 
+<html>
+<head>
+	<title>Đăng nhập</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="guest_user/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="guest_user/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="guest_user/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="guest_user/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="guest_user/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="guest_user/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="guest_user/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="guest_user/vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="guest_user/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="guest_user/css/util.css">
+	<link rel="stylesheet" type="text/css" href="guest_user/css/main.css">
+<!--===============================================================================================-->
+    <link href="guest_user/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+     <link href="guest_user/css/background_dong.css" rel='stylesheet' type='text/css' media="all">
+  <script type="text/javascript"> 
   //--thay the chuoi pass nhập dạng text thành ****
   function textthaydoi()
   {
@@ -69,11 +68,9 @@
         	
 }
 </script>
-   </head>
-   <body style="background: hsl(217, 12%, 84%)">   
-	<!-- //main-->
-	<h2>FORM ĐĂNG NHẬP</h2>
-	<div class="row" id="particle-container">
+</head>
+<body>
+	<div class="limiter">
 	<div class="particle"></div>
     <div class="particle"></div>
     <div class="particle"></div>
@@ -126,44 +123,71 @@
     <div class="particle"></div>
     <div class="particle"></div>
     <div class="particle"></div>
-	<div class="col-lg-2 col-md-2"></div>
-	<div class="col-lg-8 col-md-8" >
+		<div class="container-login100" style="background: hsl(200, 40%, 54%)">
 	
-		<form action="KiemTraDangNhap_KH" action="Post">
-		  <div class="imgcontainer">
-		    <img src="img_avatar2.png" alt="Avatar" class="avatar">
-		  </div>
-		
-		  <div class="container" >
-		    <label for="uname"><b>Tên đăng nhập</b></label>
-		    <input type="text" placeholder="Enter Username" name="tenDangNhap" id="uname">
-			  <small class="text-danger" id="validate-username"></small><br>
-		    <label for="exampleInputPassword1"><b>Mật khẩu</b></label>
-		    <input type="password" placeholder="Enter Password" name="matKhau" id="exampleInputPassword1"> 
-		    <small class="text-danger" id="validate-pass"></small>
-                <small id="passwordHelp" class="form-text text-muted" style="color : red"> Vui lòng nhập mật khẩu vào đây</small>
-		   		<button type="submit" onclick="return validateForm(); ">Đăng nhập</button>
-		    <label>
-		      <input type="checkbox" checked="checked" name="remember"> Ghi nhớ người dùng
-		    </label>
-		  </div>
-		
-		  <div class="container" style="background-color:#f1f1f1">
-		    <a href="DangKyTaiKhoan.jsp"><button type="button" class="cancelbtn">Đăng ký</button></a>
-		   	<a href="DatLaiMK.jsp"><button type="button" class="cancelbtn">Quên mật khẩu</button></a>
-		   	
-		  </div>
-		  
-		</form>
+			<div class="wrap-login100">
+				<div class="login100-form-title" style="background-image: url(guest_user/images/bg-01.jpg);">
+					<span class="login100-form-title-1">
+						SIGN IN
+					</span>
+				</div>
+
+				<form action="KiemTraDangNhap_KH" action="Post" class="login100-form validate-form">
+					<div class="wrap-input100 m-b-26" >
+						<span class="label-input100">Tên đăng nhập</span>
+						<input class="input100" type="text" name="tenDangNhap" id="uname" placeholder="Nhập tên đăng nhập">
+						<small class="text-danger" id="validate-username"></small><br>
+					</div>
+
+					<div class="wrap-input100  m-b-18" >
+						<span class="label-input100">Mật khẩu</span>
+						<input class="input100" type="password" name="matKhau" id="exampleInputPassword1" placeholder="Nhập mật khẩu">
+						<small class="text-danger" id="validate-pass"></small><br>
+					</div>
+
+					<div class="flex-sb-m w-full p-b-30">
+						<div class="contact100-form-checkbox">
+							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+							<label class="label-checkbox100" for="ckb1">
+								Ghi nhớ người dùng
+							</label>
+						</div>
+
+						<div>
+							<a href="DatLaiMK.jsp" class="txt1">
+								Quên mật khẩu?
+							</a>
+						</div>
+					</div>
+						<button type="submit" class="login100-form-btn" onclick="return validateForm(); ">
+							Đăng nhập
+						</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						 <a href="DangKyTaiKhoan.jsp"><button type="button" class="login100-form-btn">
+							Đăng ký
+						</button></a>
+					
+					
+				</form>
+			</div>
+		</div>
 	</div>
-	<div class="col-lg-2 col-md-2"></div>
-	 
-	</div>
-      <!-- footer -->
-      	<footer>
-      		<jsp:include page="guest_user/footer/footerlevel1.jsp"></jsp:include>
-      	</footer>
-      <!-- //Modal 1-->
-    
-   </body>
+	
+<!--===============================================================================================-->
+	<script src="guest_user/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="guest_user/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="guest_user/vendor/bootstrap/js/popper.js"></script>
+	<script src="guest_user/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="guest_user/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="guest_user/vendor/daterangepicker/moment.min.js"></script>
+	<script src="guest_user/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="guest_user/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="guest_user/js/main.js"></script>
+
+</body>
 </html>

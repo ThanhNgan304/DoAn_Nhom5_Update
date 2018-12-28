@@ -1,45 +1,35 @@
- <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="zxx">
-   <head>
-      <title>Đặt lại mật khẩu</title>
-      <!--meta tags -->
-     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="keywords" content="" />
-      <!-- <script>
-         addEventListener("load", function () {
-         	setTimeout(hideURLbar, 0);
-         }, false);
-         
-         function hideURLbar() {
-         	window.scrollTo(0, 1);
-         } 
-      </script>-->
-      <!--//meta tags ends here-->
-      <!--booststrap-->
-      <link href="guest_user/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
-      <!--//booststrap end-->
-      <!-- font-awesome icons -->
-      <link href="guest_user/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">
-      <!-- //font-awesome icons -->
-      <!-- For Clients slider -->
-      <link rel="stylesheet" href="guest_user/css/flexslider.css" type="text/css" media="all" />
-      <!--flexs slider-->
-      <link href="guest_user/css/JiSlider.css" rel="stylesheet">
-       <link href="guest_user/css/background_dong.css" rel='stylesheet' type='text/css' media="all">
-      <!--Shoping cart-->
-      <!-- <link rel="stylesheet" href="guest_user/css/shop.css" type="text/css" />
- -->      <!--//Shoping cart-->
-      <!--stylesheets-->
-      <link href="guest_user/css/style.css" rel='stylesheet' type='text/css' media="all">
-      <link href="guest_user/css/login.css" rel='stylesheet' type='text/css' media="all">
-      <!--//stylesheets-->
-      <link href="//fonts.googleapis.com/css?family=Sunflower:500,700" rel="stylesheet">
-      <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-      <script type="text/javascript" src="guest_user/assests/js/jquery-3.3.1.min.js"></script>
-	 <script type="text/javascript" src="guest_user/js/kiemtradangnhap.js"></script> 
-    <script type="text/javascript"> 
+<html>
+<head>
+	<title>Đổi mật khẩu</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="guest_user/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="guest_user/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="guest_user/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="guest_user/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="guest_user/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="guest_user/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="guest_user/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="guest_user/vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="guest_user/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="guest_user/css/util.css">
+	<link rel="stylesheet" type="text/css" href="guest_user/css/main.css">
+<!--===============================================================================================-->
+    <link href="guest_user/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+     <link href="guest_user/css/background_dong.css" rel='stylesheet' type='text/css' media="all">
+  <script type="text/javascript"> 
 	function validateForm() {
 	    var tenDN =  $("#inputTenDN").val();
         var email = $("#inputEmail").val();
@@ -101,11 +91,9 @@
     return true;
 }
 </script>
-   </head>
-   <body style="background: hsl(217, 12%, 84%)">   
-	<!-- //main-->
-	<h2>FORM QUÊN MẬT KHẨU</h2>
-	<div class="row"  id="particle-container">
+</head>
+<body>
+	<div class="limiter">
 	<div class="particle"></div>
     <div class="particle"></div>
     <div class="particle"></div>
@@ -158,44 +146,63 @@
     <div class="particle"></div>
     <div class="particle"></div>
     <div class="particle"></div>
-	<div class="col-lg-2 col-md-2"></div>
-	<div class="col-lg-8 col-md-8">
-		<form action="DatLaiMK" method="Post">
-		
-		  <div class="container">
-		    <label for="uname"><b>Tên đăng nhập</b></label>
-                <input type="text" placeholder="Nhập tên đăng nhập" name="tenDangNhap" id="inputTenDN">
-                <small id="validate-TenDN" class="text-danger"></small><br>
-		    <label for="exampleInputEmail"><b>Email</b></label>
-                <input type="text" placeholder="Nhập email" name="email" id="inputEmail"> 
-                <small class="text-danger" id="validate-Email"></small><br>
-             <label for=""><b>Mật khẩu mới</b></label>
-                <input type="password" placeholder="Nhập mật khẩu mới" name="matKhau" id="inputMK">
-                <small class="text-danger" id="validate-MK"></small><br>
-             <label for=""><b>Xác nhận mật khẩu mới</b></label>
-                <input type="password" placeholder="Nhập lại mật khẩu mới" name="" id="inputMKM">
-                <small class="text-danger" id="validate-MKM"></small><br>
-		
-		  </div>
-		
-		  <div class="container" style="background-color:#f1f1f1">
-			  <button type="submit" onclick="return validateForm(); ">Xác nhận</button>
-		     <a href="DatLaiMK.jsp"><button type="button"
-											class="btn btn-danger">
-											<i class="fa fa-trash-o"></i> Hủy bỏ
-										</button></a>
-			<br>
-			
-		  </div>
-		</form>
+		<div class="container-login100" style="background: hsl(200, 40%, 54%)">
+	
+			<div class="wrap-login100">
+				<div class="login100-form-title" style="background-image: url(guest_user/images/bg-01.jpg);">
+					<span class="login100-form-title-1">
+						CHANGE PASSWORD
+					</span>
+				</div>
+
+				<form action="DatLaiMK" method="Post" class="login100-form">
+					<div class="wrap-input100 m-b-26" >
+						<span class="label-input100">Tên đăng nhập</span>
+						<input class="input100" type="text" placeholder="Nhập tên đăng nhập" name="tenDangNhap" id="inputTenDN">
+						<small class="text-danger" id="validate-TenDN" ></small><br>
+					</div>
+					<div class="wrap-input100 m-b-26" >
+						<span class="label-input100">Email</span>
+						<input class="input100" type="text" placeholder="Nhập email" name="email" id="inputEmail">
+						<small class="text-danger" id="validate-Email"></small><br>
+					</div>
+					<div class="wrap-input100  m-b-18" >
+						<span class="label-input100">Mật khẩu mới</span>
+						<input class="input100" type="password" placeholder="Nhập mật khẩu mới" name="matKhau" id="inputMK">
+						<small class="text-danger" id="validate-MK"></small><br>
+					</div >
+					<div class="wrap-input100  m-b-18" >
+						<span class="label-input100">Xác nhận mật khẩu mới</span>
+						<input class="input100" type="password" placeholder="Nhập lại mật khẩu mới" name="" id="inputMKM">
+						<small class="text-danger" id="validate-MKM"></small><br>
+					</div >
+					<button  class="login100-form-btn"  type="submit" onclick="return validateForm(); ">
+						Xác nhận
+					</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="DangNhap.jsp"><button type="button" class="login100-form-btn" >
+						Hủy bỏ
+					</button> </a>
+				</form>
+			</div>
+		</div>
 	</div>
-	<div class="col-lg-2 col-md-2"></div>
-	</div>
-      <!-- footer -->
-      	<footer>
-      		<jsp:include page="guest_user/footer/footerlevel1.jsp"></jsp:include>
-      	</footer>
-      <!-- //Modal 1-->
-     
-   </body>
+	
+<!--===============================================================================================-->
+	<script src="guest_user/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="guest_user/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="guest_user/vendor/bootstrap/js/popper.js"></script>
+	<script src="guest_user/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="guest_user/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="guest_user/vendor/daterangepicker/moment.min.js"></script>
+	<script src="guest_user/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="guest_user/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="guest_user/js/main.js"></script>
+
+</body>
 </html>
